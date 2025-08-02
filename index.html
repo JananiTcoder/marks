@@ -1,268 +1,85 @@
 <!DOCTYPE html>
-<html lang="en-IN">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Marksheet</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #000;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 20px auto;
-      border: 1px solid #ccc;
-      padding: 20px;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 3px solid #004080;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-
-    .college-info {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .college-logo {
-      width: 300px;
-      height: auto;
-    }
-
-    .college-title {
-      font-size: 24px;
-      font-weight: bold;
-      color: #002060;
-    }
-
-    .student-photo {
-      width: 100px;
-      height: 100px;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      object-fit: cover;
-    }
-
-    main {
-      display: block;
-    }
-
-    .student-info {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .student-info div {
-      font-size: 14px;
-    }
-
-    .student-info a {
-      color: #0056b3;
-      text-decoration: underline;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-      font-size: 14px;
-    }
-
-    table caption {
-      font-weight: bold;
-      text-align: left;
-      margin-bottom: 5px;
-    }
-
-    table th,
-    table td {
-      border: 1px solid #004080;
-      text-align: center;
-      padding: 8px;
-    }
-
-    table th {
-      background-color: #004080;
-      color: white;
-    }
-
-    .view-details {
-      background: #004080;
-      color: white;
-      font-weight: bold;
-      padding: 5px;
-    }
-
-    .subject-table th {
-      background-color: #004080;
-      color: white;
-    }
-
-    .subject-table td {
-      background-color: #f9f9f9;
-    }
-
-    .letter-grade {
-      font-weight: bold;
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
-    }
-  </style>
+    <title>Result Details - 4th Semester</title>
 </head>
-
 <body>
-  <div class="container">
-    <header>
-      <div class="college-info">
-        <img src="college-logo.png" alt="Official logo of Sri Venkateswara College of Engineering" class="college-logo">
-        <h1 class="college-title">Sri Venkateswara College of Engineering</h1>
-      </div>
-      <img src="student-photo.jpg" alt="Student portrait of JANANI T" class="student-photo">
-    </header>
+    <center>
+        <!-- Two logos in one line -->
+        <img src="images/logo.jpeg" alt="College Logo 1" width="200px">
+        <img src="images/svce.jpeg" alt="College Logo 2" width="100px">
+        <br>
+        <h2>Result Details - 4th Semester</h2>
+    </center>
+    <hr>
 
-    <main>
-      <section class="student-info" aria-labelledby="student-info-title">
-        <h2 id="student-info-title">Student Information</h2>
-        <div><strong>Student Name:</strong> JANANI T</div>
-        <div><strong>Degree:</strong> B.E.</div>
-        <div><strong>Branch:</strong> <a href="#">Computer Science and Engineering</a></div>
-        <div><strong>Current Semester:</strong> 05</div>
-        <div><strong>Univ. Reg. No.:</strong> <a href="#">2127230501061</a></div>
-        <div><strong>Adm. No.:</strong> 2023CS0309</div>
-      </section>
+    <!-- Student Info + Photo -->
+    <table width="80%" border="0" cellspacing="5" cellpadding="5" align="center">
+                    <center> <h3>Student Details</h3></center>
 
-      <table aria-label="Academic Summary">
-        <caption>Academic Summary</caption>
-        <thead>
-          <tr>
-            <th scope="col" class="view-details">VIEW DETAILS</th>
-            <th scope="col">SEMESTER</th>
-            <th scope="col">TOTAL CREDITS</th>
-            <th scope="col">EARNED CREDITS</th>
-            <th scope="col">GPA</th>
-            <th scope="col">CGPA</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
+        <tr>
             <td>
-              <span aria-hidden="true">🔍</span>
-              <span class="sr-only">View Details</span>
+                <b>Name:</b> Divya Bharathi R <br>
+                <b>Register No:</b> 2127230501037 <br>
+                <b>Admission No:</b> 2023CS0098 <br>
+                <b>Year:</b> 2nd <br>
+                <b>Department & Section:</b> CSE - "A" <br>
+                <b>Semester:</b> 4th
             </td>
-            <td>4</td>
-            <td>25.00</td>
-            <td>25.00</td>
-            <td>10</td>
-            <td>10</td>
-          </tr>
-        </tbody>
-      </table>
+            <!-- Photo on right -->
+            <td align="right">
+                <img src="images/pic.jpeg" alt="Student Photo" width="120">
+            </td>
+        </tr>
+    </table>
 
-      <table class="subject-table" aria-label="Subject-wise Marks">
-        <caption>Subject-wise Marks</caption>
-        <thead>
-          <tr>
-            <th scope="col">SR.NO.</th>
-            <th scope="col">SUBJECT CODE</th>
-            <th scope="col">SUBJECT NAME</th>
-            <th scope="col">INTERNAL</th>
-            <th scope="col">EXTERNAL</th>
-            <th scope="col">TOTAL</th>
-            <th scope="col">LETTER GRADE</th>
-            <th scope="col">RESULT</th>
-            <th scope="col">MONTH & YEAR OF PASSING</th>
-            <th scope="col">EARNED CREDITS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>CS22401</td>
-            <td>Operating Systems</td>
-            <td>40.00</td>
-            <td>60.00</td>
-            <td>100.00</td>
-            <td class="letter-grade">O</td>
-            <td>PASS</td>
-            <td>MAY-25</td>
-            <td>3.00</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>CS22402</td>
-            <td>Machine Learning Techniques</td>
-            <td>40.00</td>
-            <td>60.00</td>
-            <td>100.00</td>
-            <td class="letter-grade">O+</td>
-            <td>PASS</td>
-            <td>MAY-25</td>
-            <td>3.00</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>CS22403</td>
-            <td>Design and Analysis of Algorithms</td>
-            <td>40.00</td>
-            <td>60.00</td>
-            <td>100.00</td>
-            <td class="letter-grade">O</td>
-            <td>PASS</td>
-            <td>MAY-25</td>
-            <td>3.00</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>CS22409</td>
-            <td>Java Programming: Theory and Practices</td>
-            <td>50.00</td>
-            <td>50.00</td>
-            <td>100.00</td>
-            <td class="letter-grade">O</td>
-            <td>PASS</td>
-            <td>MAY-25</td>
-            <td>4.00</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>CS22411</td>
-            <td>Operating Systems Laboratory</td>
-            <td>54.00</td>
-            <td>39.00</td>
-            <td>93.00</td>
-            <td class="letter-grade">O</td>
-            <td>PASS</td>
-            <td>MAY-25</td>
-            <td>1.50</td>
-          </tr>
-        </tbody>
-      </table>
-    </main>
-  </div>
+     <center>
+        <table border="1" cellpadding="10" cellspacing="0" width="50%">
+            <tr style="background-color:#004080; color:white;">
+                <th>Semester</th>
+                <th>Total Credits</th>
+                <th>Earned Credits</th>
+                <th>GPA</th>
+                <th>CGPA</th>
+            </tr>
+            <tr style="text-align:center;">
+                <th>04</th>
+                <th>23.00</th>
+                <th>23.00</th>
+                <td>8.717</td>
+                <td>8.750</td>
+            </tr>
+        </table>
+        </center>
+    <!-- Marks Table -->
+    <center>
+        <table border="1" cellpadding="6" cellspacing="0" width="50%">
+            <tr style="background-color:#004080; color:white;">
+                <th><b>S.No</b></th>
+                <th><b>Subject Code</b></th>
+                <th><b>Subject Name</b></th>
+                <th><b>Internal</b></th>
+                <th><b>External</b></th>
+                <th><b>Total</b></th>
+                <th><b>Grade</b></th>
+                <th><b>Result</b></th>
+                <th><b>Credits</b></th>
+            </tr>
+            <tr><td>1</td><td>CS22401</td><td>Operating Systems</td><td>34</td><td>51</td><td>85</td><td>A</td><td>PASS</td><td>3.00</td></tr>
+            <tr><td>2</td><td>CS22402</td><td>Machine Learning Techniques</td><td>36</td><td>50</td><td>86</td><td>A</td><td>PASS</td><td>3.00</td></tr>
+            <tr><td>3</td><td>CS22403</td><td>Design and Analysis of Algorithms</td><td>35</td><td>45</td><td>80</td><td>A</td><td>PASS</td><td>3.00</td></tr>
+            <tr><td>4</td><td>CS22409</td><td>Java Programming: Theory & Practices</td><td>45</td><td>45</td><td>90</td><td>A+</td><td>PASS</td><td>4.00</td></tr>
+            <tr><td>5</td><td>CS22411</td><td>Operating Systems Laboratory</td><td>43</td><td>37</td><td>80</td><td>A</td><td>PASS</td><td>1.50</td></tr>
+            <tr><td>6</td><td>CS22412</td><td>AI & Machine Learning Lab</td><td>49</td><td>37</td><td>86</td><td>A+</td><td>PASS</td><td>1.50</td></tr>
+            <tr><td>7</td><td>GE22451</td><td>Environmental Sciences</td><td>36</td><td>53</td><td>89</td><td>A+</td><td>PASS</td><td>3.00</td></tr>
+            <tr><td>8</td><td>MA22454</td><td>Probability & Queuing Theory</td><td>39</td><td>60</td><td>99</td><td>O</td><td>PASS</td><td>4.00</td></tr>
+            <tr><td>9</td><td>VD22003</td><td>Power BI</td><td>0</td><td>0</td><td>0</td><td>P</td><td>PASS</td><td>0.00</td></tr>
+        </table>
+    </center>
+
+
+        <center>
+        <h2>For more details visit: <a href="https://www.svce.ac.in" target="_blank">www.svce.ac.in</a></h2>
+    </center>
 </body>
-
 </html>

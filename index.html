@@ -60,11 +60,20 @@
       display: block;
     }
 
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+
     .student-info {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
       margin-bottom: 20px;
+      flex: 1;
     }
 
     .student-info div {
@@ -74,6 +83,16 @@
     .student-info a {
       color: #0056b3;
       text-decoration: underline;
+    }
+
+    /* Slightly bigger college image */
+    .college-image {
+      width: 400px;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      margin-top: 10px;
+      flex-shrink: 0;
     }
 
     table {
@@ -145,15 +164,19 @@
     </header>
 
     <main>
-      <section class="student-info" aria-labelledby="student-info-title">
-        <h2 id="student-info-title">Student Information</h2>
-        <div><strong>Student Name:</strong> JANANI T</div>
-        <div><strong>Degree:</strong> B.E.</div>
-        <div><strong>Branch:</strong> <a href="#">Computer Science and Engineering</a></div>
-        <div><strong>Current Semester:</strong> 05</div>
-        <div><strong>Univ. Reg. No.:</strong> <a href="#">2127230501061</a></div>
-        <div><strong>Adm. No.:</strong> 2023CS0309</div>
-      </section>
+      <div class="top-section">
+        <section class="student-info" aria-labelledby="student-info-title">
+          <h2 id="student-info-title">Student Information</h2>
+          <div><strong>Student Name:</strong> JANANI T</div>
+          <div><strong>Degree:</strong> B.E.</div>
+          <div><strong>Branch:</strong> <a href="#">Computer Science and Engineering</a></div>
+          <div><strong>Current Semester:</strong> 05</div>
+          <div><strong>Univ. Reg. No.:</strong> <a href="#">2127230501061</a></div>
+          <div><strong>Adm. No.:</strong> 2023CS0309</div>
+        </section>
+
+        <img src="college-building.jpg" alt="Sri Venkateswara College of Engineering Building" class="college-image">
+      </div>
 
       <table aria-label="Academic Summary">
         <caption>Academic Summary</caption>

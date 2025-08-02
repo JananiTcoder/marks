@@ -120,6 +120,17 @@
     .letter-grade {
       font-weight: bold;
     }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
   </style>
 </head>
 
@@ -158,7 +169,10 @@
         </thead>
         <tbody>
           <tr>
-            <td aria-label="View Details">🔍</td>
+            <td>
+              <span aria-hidden="true">🔍</span>
+              <span class="sr-only">View Details</span>
+            </td>
             <td>4</td>
             <td>25.00</td>
             <td>25.00</td>

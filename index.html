@@ -22,7 +22,7 @@
       padding: 20px;
     }
 
-    .header {
+    header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -42,9 +42,8 @@
       height: auto;
     }
 
-    /* Increased contrast */
     .college-title {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: bold;
       color: #002060;
     }
@@ -55,6 +54,10 @@
       border: 2px solid #ccc;
       border-radius: 8px;
       object-fit: cover;
+    }
+
+    main {
+      display: block;
     }
 
     .student-info {
@@ -68,7 +71,6 @@
       font-size: 14px;
     }
 
-    /* Increased link contrast */
     .student-info a {
       color: #0056b3;
       text-decoration: underline;
@@ -79,6 +81,12 @@
       border-collapse: collapse;
       margin-bottom: 20px;
       font-size: 14px;
+    }
+
+    table caption {
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 5px;
     }
 
     table th,
@@ -117,120 +125,129 @@
 
 <body>
   <div class="container">
-
-    <div class="header">
+    <header>
       <div class="college-info">
-        <img src="college-logo.png" alt="College Logo" class="college-logo">
-        <div>
-          <div class="college-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sri Venkateswara
-            College of Engineering</div>
-        </div>
+        <img src="college-logo.png" alt="Sri Venkateswara College of Engineering Logo" class="college-logo">
+        <h1 class="college-title">Sri Venkateswara College of Engineering</h1>
       </div>
-      <img src="student-photo.jpg" alt="Student Photo" class="student-photo">
-    </div>
+      <img src="student-photo.jpg" alt="Student photo of JANANI T" class="student-photo">
+    </header>
 
-    <div class="student-info">
-      <div><strong>Student Name:</strong> JANANI T</div>
-      <div><strong>Degree:</strong> B.E.</div>
-      <div><strong>Branch:</strong> <a href="#">Computer Science and Engineering</a></div>
-      <div><strong>Current Semester:</strong> 05</div>
-      <div><strong>Univ. Reg. No.:</strong> <a href="#">2127230501061</a></div>
-      <div><strong>Adm. No.:</strong> 2023CS0309</div>
-    </div>
+    <main>
+      <section class="student-info" aria-labelledby="student-info-title">
+        <h2 id="student-info-title">Student Information</h2>
+        <div><strong>Student Name:</strong> JANANI T</div>
+        <div><strong>Degree:</strong> B.E.</div>
+        <div><strong>Branch:</strong> <a href="#">Computer Science and Engineering</a></div>
+        <div><strong>Current Semester:</strong> 05</div>
+        <div><strong>Univ. Reg. No.:</strong> <a href="#">2127230501061</a></div>
+        <div><strong>Adm. No.:</strong> 2023CS0309</div>
+      </section>
 
-    <table>
-      <tr>
-        <th class="view-details">VIEW DETAILS</th>
-        <th>SEMESTER</th>
-        <th>TOTAL CREDITS</th>
-        <th>EARNED CREDITS</th>
-        <th>GPA</th>
-        <th>CGPA</th>
-      </tr>
-      <tr>
-        <td>🔍</td>
-        <td>4</td>
-        <td>25.00</td>
-        <td>25.00</td>
-        <td>10</td>
-        <td>10</td>
-      </tr>
-    </table>
+      <table>
+        <caption>Academic Summary</caption>
+        <thead>
+          <tr>
+            <th scope="col" class="view-details">VIEW DETAILS</th>
+            <th scope="col">SEMESTER</th>
+            <th scope="col">TOTAL CREDITS</th>
+            <th scope="col">EARNED CREDITS</th>
+            <th scope="col">GPA</th>
+            <th scope="col">CGPA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🔍</td>
+            <td>4</td>
+            <td>25.00</td>
+            <td>25.00</td>
+            <td>10</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <table class="subject-table">
-      <tr>
-        <th>SR.NO.</th>
-        <th>SUBJECT CODE</th>
-        <th>SUBJECT NAME</th>
-        <th>INTERNAL</th>
-        <th>EXTERNAL</th>
-        <th>TOTAL</th>
-        <th>LETTER GRADE</th>
-        <th>RESULT</th>
-        <th>MONTH & YEAR OF PASSING</th>
-        <th>EARNED CREDITS</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>CS22401</td>
-        <td>Operating Systems</td>
-        <td>40.00</td>
-        <td>60.00</td>
-        <td>100.00</td>
-        <td class="letter-grade">O</td>
-        <td>PASS</td>
-        <td>MAY-25</td>
-        <td>3.00</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>CS22402</td>
-        <td>Machine Learning Techniques</td>
-        <td>40.00</td>
-        <td>60.00</td>
-        <td>100.00</td>
-        <td class="letter-grade">O+</td>
-        <td>PASS</td>
-        <td>MAY-25</td>
-        <td>3.00</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>CS22403</td>
-        <td>Design and Analysis of Algorithms</td>
-        <td>40.00</td>
-        <td>60.00</td>
-        <td>100.00</td>
-        <td class="letter-grade">O</td>
-        <td>PASS</td>
-        <td>MAY-25</td>
-        <td>3.00</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>CS22409</td>
-        <td>Java Programming: Theory and Practices</td>
-        <td>50.00</td>
-        <td>50.00</td>
-        <td>100.00</td>
-        <td class="letter-grade">O</td>
-        <td>PASS</td>
-        <td>MAY-25</td>
-        <td>4.00</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>CS22411</td>
-        <td>Operating Systems Laboratory</td>
-        <td>54.00</td>
-        <td>39.00</td>
-        <td>93.00</td>
-        <td class="letter-grade">O</td>
-        <td>PASS</td>
-        <td>MAY-25</td>
-        <td>1.50</td>
-      </tr>
-    </table>
+      <table class="subject-table">
+        <caption>Subject-wise Marks</caption>
+        <thead>
+          <tr>
+            <th scope="col">SR.NO.</th>
+            <th scope="col">SUBJECT CODE</th>
+            <th scope="col">SUBJECT NAME</th>
+            <th scope="col">INTERNAL</th>
+            <th scope="col">EXTERNAL</th>
+            <th scope="col">TOTAL</th>
+            <th scope="col">LETTER GRADE</th>
+            <th scope="col">RESULT</th>
+            <th scope="col">MONTH & YEAR OF PASSING</th>
+            <th scope="col">EARNED CREDITS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>CS22401</td>
+            <td>Operating Systems</td>
+            <td>40.00</td>
+            <td>60.00</td>
+            <td>100.00</td>
+            <td class="letter-grade">O</td>
+            <td>PASS</td>
+            <td>MAY-25</td>
+            <td>3.00</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>CS22402</td>
+            <td>Machine Learning Techniques</td>
+            <td>40.00</td>
+            <td>60.00</td>
+            <td>100.00</td>
+            <td class="letter-grade">O+</td>
+            <td>PASS</td>
+            <td>MAY-25</td>
+            <td>3.00</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>CS22403</td>
+            <td>Design and Analysis of Algorithms</td>
+            <td>40.00</td>
+            <td>60.00</td>
+            <td>100.00</td>
+            <td class="letter-grade">O</td>
+            <td>PASS</td>
+            <td>MAY-25</td>
+            <td>3.00</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>CS22409</td>
+            <td>Java Programming: Theory and Practices</td>
+            <td>50.00</td>
+            <td>50.00</td>
+            <td>100.00</td>
+            <td class="letter-grade">O</td>
+            <td>PASS</td>
+            <td>MAY-25</td>
+            <td>4.00</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>CS22411</td>
+            <td>Operating Systems Laboratory</td>
+            <td>54.00</td>
+            <td>39.00</td>
+            <td>93.00</td>
+            <td class="letter-grade">O</td>
+            <td>PASS</td>
+            <td>MAY-25</td>
+            <td>1.50</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
   </div>
 </body>
 
